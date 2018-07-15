@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Riccardo</title>
+</head>
+<body>
+    Redirecting you to the portfolio, if this does not happen automatically please go <a href="en/index.html">here</a>.
+</body>
+<script>
+    var language = window.navigator.userLanguage || window.navigator.language;
+    alert(language); //works IE/SAFARI/CHROME/FF
+    if (language == "nl-NL") {
+        window.location.assign("nl/index.html");
+    } else {
+        window.location.assign("en/index.html");
+    }
+</script>
+</html>
