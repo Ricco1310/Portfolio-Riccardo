@@ -11,8 +11,8 @@
 </body>
 <script>
     var language = window.navigator.userLanguage || window.navigator.language;
-    alert(language); //works IE/SAFARI/CHROME/FF
-    if (language == "nl-NL") {
+    //alert(language); //works IE/SAFARI/CHROME/FF
+    if (language == "nl-NL" || language == "nl" || language == "NL") {
         window.location.assign("nl/index.html");
     } else {
         window.location.assign("en/index.html");
