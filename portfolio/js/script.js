@@ -5,6 +5,12 @@ $(document).ready(function() {
       var sectionID = $(this).attr("data-id");
       scrollToID('#' + sectionID, 750);
     });
+    // navigation brand click actions
+    $('.nav-brand').on('click', function(event) {
+      event.preventDefault();
+      var sectionID = $(this).attr("data-id");
+      scrollToID('#' + sectionID, 750);
+    });
     // scroll to top action
     $('.nav-top').on('click', function(event) {
       event.preventDefault();
@@ -20,7 +26,7 @@ $(document).ready(function() {
   });
   // scroll function
   function scrollToID(id, speed) {
-    var offSet = 0;
+    var offSet = 60;
     var targetOffset = $(id).offset().top - offSet;
     var mainNav = $('#main-nav');
     $('html,body').animate({
