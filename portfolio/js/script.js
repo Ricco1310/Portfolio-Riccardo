@@ -1,3 +1,5 @@
+var projectsCollapseButtonExpanded = false;
+
 $(document).ready(function() {
     // navigation click actions	
     $('.nav-link').on('click', function(event) {
@@ -11,17 +13,15 @@ $(document).ready(function() {
       var sectionID = $(this).attr("data-id");
       scrollToID('#' + sectionID, 750);
     });
-    // scroll to top action
-    $('.nav-top').on('click', function(event) {
+    $('#projectsCollapseButton').on('click', function(event) {
       event.preventDefault();
-      $('html, body').animate({
-        scrollTop: 0
-      }, 'slow');
-    });
-    // mobile nav toggle
-    $('#nav-toggle').on('click', function(event) {
-      event.preventDefault();
-      $('#main-nav').toggleClass("open");
+      projectsCollapseButtonExpanded = $(this).attr("aria-expanded");
+      if (projectsCollapseButtonExpanded == "true") {
+        $(this).text("View more");
+      } else {
+        $(this).text("View less");
+      }
+      
     });
   });
   // scroll function
