@@ -20,16 +20,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
         crossorigin="anonymous">
 </head>
-<!--
-     data-spy="scroll" data-target=".navbar" data-offset="60"
--->
 
 <body id="portfolio" data-spy="scroll" data-target=".navbar" data-offset="70">
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container">
                 <a class="navbar-brand nav-link" data-id="landing" href="#landing" id="navbar-brand">
-                    <img src="img/MyFace.png" width="40" height="40" alt="Picture of me"> Riccardo Waardenburg
+                    <img src="img/MyFace.png" width="40" height="40" alt="Picture of me">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +34,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" data-id="landing" href="#landing">Riccardo Waardenburg</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" data-id="projects" href="#projects">Projects</a>
                         </li>
@@ -307,8 +307,8 @@
                     </div>
                 </div>
                 <div class="row m-y-5">
-                        <hr>
-                    </div>
+                    <hr>
+                </div>
             </div>
         </div>
 
@@ -368,9 +368,39 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <img src="img/nieuwCV-page-001.jpg" class="img-fluid" alt="Resume of Riccardo Waardenburg" data-toggle="modal" data-target="#resumeImageModal">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row row-full bg-secondary" id="contact">
+        <!-- Modal -->
+        <div class="modal fade" id="resumeImageModal" tabindex="-1" role="dialog" aria-labelledby="resumeImageModalInner" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="resumeImageModalInner">Resume Riccardo Waardenburg</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 offset-md-1">
+                                        <img src="img/nieuwCV-page-001.jpg" class="img-fluid" alt="Resume of Riccardo Waardenburg" data-toggle="modal" data-target="#resumeImageModal">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-secondary" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -380,15 +410,67 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul>
+                            <li>
+                                <i class="fas fa-mobile fa-fw"></i>
+                                <a href="tel:+31619672972"></a>+31619672972</li>
+                            <li>
+                                <i class="far fa-envelope fa-fw"></i>
+                                <a href="mailto:ricoux@outlook.com"></a>ricoux@outlook.com"</li>
+                            <li>
+                                <i class="fas fa-map-marker fa-fw"></i>Reigersbek 1, Hendrik-Ido-Ambacht</li>
+                        </ul>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.8248809241663!2d4.641786115951706!3d51.827629395059134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c42e95888b9513%3A0x45e5688b85bc1a2b!2sReigersbek%2C+Hendrik-Ido-Ambacht!5e0!3m2!1snl!2snl!4v1532731638765"
+                            width="100%" height="300vh" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="text-uppercase mt-3 font-weight-bold text-white">Contact</h2>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control mt-2" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control mt-2" placeholder="Company" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control mt-2" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control mt-2" placeholder="Phone" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="formMessageTextArea" placeholder="Your message" rows="3" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-light" type="submit">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </main>
 
     <footer class="container-fluid">
         <div class="row bg-dark" id="footer">
             <div class="col-md-12">
                 <p class="text-center text-white">
-                    Copyright Riccardo Waardenburg
+                    Copyright <i class="far fa-copyright fa-fw"></i> Riccardo Waardenburg
                 </p>
             </div>
 
