@@ -1,6 +1,10 @@
 var projectsCollapseButtonExpanded = false;
 
 $(document).ready(function() {
+
+  var currentDate = new Date();
+  var currentYear = currentDate.getFullYear();
+
     // navigation click actions	
     $('.nav-link').on('click', function(event) {
       event.preventDefault();
@@ -23,7 +27,9 @@ $(document).ready(function() {
       }
       
     });
+    $('#copyright-year').text(currentYear);
   });
+
   // scroll function
   function scrollToID(id, speed) {
     var offSet = 60;
