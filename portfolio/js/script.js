@@ -1,234 +1,156 @@
 var projectsCollapseButtonExpanded = false;
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-  var currentDate = new Date();
-  var currentYear = currentDate.getFullYear();
+    var currentDate = new Date();
+    var currentYear = currentDate.getFullYear();
 
+    // all navigation functions
     // navigation click actions	
-    $('.nav-link').on('click', function(event) {
-      event.preventDefault();
-      var sectionID = $(this).attr("data-id");
-      scrollToID('#' + sectionID, 750);
+    $('.nav-link').on('click', function (event) {
+        event.preventDefault();
+        var sectionID = $(this).attr("data-id");
+        scrollToID('#' + sectionID, 750, 60);
     });
     // navigation brand click actions
-    $('.nav-brand').on('click', function(event) {
-      event.preventDefault();
-      var sectionID = $(this).attr("data-id");
-      scrollToID('#' + sectionID, 750);
+    $('.nav-brand').on('click', function (event) {
+        event.preventDefault();
+        var sectionID = $(this).attr("data-id");
+        scrollToID('#' + sectionID, 750, 60);
     });
-    $('#projectsCollapseButton').on('click', function(event) {
-      event.preventDefault();
-      projectsCollapseButtonExpanded = $(this).attr("aria-expanded");
-      if (projectsCollapseButtonExpanded == "true") {
-        $(this).text("View more");
-      } else {
-        $(this).text("View less");
-      }
-    });
-    $('.read-more-button').on('click', function(event) {
-      event.preventDefault();
-      projectsCollapseButtonExpanded = $(this).attr("aria-expanded");
-      if (projectsCollapseButtonExpanded == "true") {
-        $(this).text("Read more");
-      } else {
-        $(this).text("Read less");
-      }
-    });
-    $('#copyright-year').text(currentYear);
-  });
 
-  // scroll function
-  function scrollToID(id, speed) {
-    var offSet = 60;
+    // all collapse functions
+    // more projects collapse button
+    $('#projectsCollapseButton').on('click', function (event) {
+        event.preventDefault();
+        projectsCollapseButtonExpanded = $(this).attr("aria-expanded");
+        if (projectsCollapseButtonExpanded == "true") {
+            $(this).text("View more");
+            scrollToID('#' + this, 200, 100);
+        } else {
+            $(this).text("View less");
+        }
+    });
+    // target read more button
+    $('#target-read-more-button').on('click', function (event) {
+        event.preventDefault();
+        projectsCollapseButtonExpanded = $('#target-read-more-button' || '#target-read-more-button-second').attr("aria-expanded");
+        if (projectsCollapseButtonExpanded == "true") {
+            $('#target-read-more-button').text("Read more");
+            $('#target-read-more-button-second').text("Read more");
+        } else {
+            $('#target-read-more-button').text("Read less");
+            $('#target-read-more-button-second').text("Read less");
+        }
+    });
+    // target red more button second
+    $('#target-read-more-button-second').on('click', function (event) {
+        event.preventDefault();
+        projectsCollapseButtonExpanded = $('#target-read-more-button' || '#target-read-more-button-second').attr("aria-expanded");
+        if (projectsCollapseButtonExpanded == "true") {
+            $('#target-read-more-button').text("Read more");
+            $('#target-read-more-button-second').text("Read more");
+        } else {
+            $('#target-read-more-button').text("Read less");
+            $('#target-read-more-button-second').text("Read less");
+        }
+        scrollToID('#target-read-more-button', 200, 100);
+    });
+    // secret motion read more button
+    $('#secret-motion-read-more-button').on('click', function (event) {
+        event.preventDefault();
+        projectsCollapseButtonExpanded = $('#secret-motion-read-more-button' || '#secret-motion-read-more-button-second').attr("aria-expanded");
+        if (projectsCollapseButtonExpanded == "true") {
+            $('#secret-motion-read-more-button').text("Read more");
+            $('#secret-motion-read-more-button-second').text("Read more");
+        } else {
+            $('#secret-motion-read-more-button').text("Read less");
+            $('#secret-motion-read-more-button-second').text("Read less");
+        }
+    });
+    // secret motion red more button second
+    $('#secret-motion-read-more-button-second').on('click', function (event) {
+        event.preventDefault();
+        projectsCollapseButtonExpanded = $('#secret-motion-read-more-button' || '#secret-motion-read-more-button-second').attr("aria-expanded");
+        if (projectsCollapseButtonExpanded == "true") {
+            $('#secret-motion-read-more-button').text("Read more");
+            $('#secret-motion-read-more-button-second').text("Read more");
+        } else {
+            $('#secret-motion-read-more-button').text("Read less");
+            $('#secret-motion-read-more-button-second').text("Read less");
+        }
+        scrollToID('#secret-motion-read-more-button', 200, 100);
+    });
+    // hendrik read more button
+    $('#hendrik-read-more-button').on('click', function (event) {
+        event.preventDefault();
+        projectsCollapseButtonExpanded = $('#hendrik-read-more-button' || '#hendrik-read-more-button-second').attr("aria-expanded");
+        if (projectsCollapseButtonExpanded == "true") {
+            $('#hendrik-read-more-button').text("Read more");
+            $('#hendrik-read-more-button-second').text("Read more");
+        } else {
+            $('#hendrik-read-more-button').text("Read less");
+            $('#hendrik-read-more-button-second').text("Read less");
+        }
+    });
+    // hendrik red more button second
+    $('#hendrik-read-more-button-second').on('click', function (event) {
+        event.preventDefault();
+        projectsCollapseButtonExpanded = $('#hendrik-read-more-button' || '#hendrik-read-more-button-second').attr("aria-expanded");
+        if (projectsCollapseButtonExpanded == "true") {
+            $('#hendrik-read-more-button').text("Read more");
+            $('#hendrik-read-more-button-second').text("Read more");
+        } else {
+            $('#hendrik-read-more-button').text("Read less");
+            $('#hendrik-read-more-button-second').text("Read less");
+        }
+        scrollToID('#hendrik-read-more-button', 200, 100);
+    });
+    // tomtom curfer read more button
+    $('#tomtom-curfer-read-more-button').on('click', function (event) {
+        event.preventDefault();
+        projectsCollapseButtonExpanded = $('#tomtom-curfer-read-more-button' || '#tomtom-curfer-read-more-button-second').attr("aria-expanded");
+        if (projectsCollapseButtonExpanded == "true") {
+            $('#tomtom-curfer-read-more-button').text("Read more");
+            $('#tomtom-curfer-read-more-button-second').text("Read more");
+        } else {
+            $('#tomtom-curfer-read-more-button').text("Read less");
+            $('#tomtom-curfer-read-more-button-second').text("Read less");
+        }
+    });
+    // tomtom curfer red more button second
+    $('#tomtom-curfer-read-more-button-second').on('click', function (event) {
+        event.preventDefault();
+        projectsCollapseButtonExpanded = $('#tomtom-curfer-read-more-button' || '#tomtom-curfer-read-more-button-second').attr("aria-expanded");
+        if (projectsCollapseButtonExpanded == "true") {
+            $('#tomtom-curfer-read-more-button').text("Read more");
+            $('#tomtom-curfer-read-more-button-second').text("Read more");
+        } else {
+            $('#tomtom-curfer-read-more-button').text("Read less");
+            $('#tomtom-curfer-read-more-button-second').text("Read less");
+        }
+        scrollToID('#tomtom-curfer-read-more-button', 200, 100);
+    });
+
+    // automated year filler for copyright
+    $('#copyright-year').text(currentYear);
+});
+
+// scroll function
+function scrollToID(id, speed, offSet) {
     var targetOffset = $(id).offset().top - offSet;
     var mainNav = $('#main-nav');
     $('html,body').animate({
-      scrollTop: targetOffset
+        scrollTop: targetOffset
     }, speed);
     if (mainNav.hasClass("open")) {
-      mainNav.css("height", "1px").removeClass("in").addClass("collapse");
-      mainNav.removeClass("open");
+        mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+        mainNav.removeClass("open");
     }
-  }
-  
-  if (typeof console === "undefined") {
+}
+
+if (typeof console === "undefined") {
     console = {
-      log: function() {}
+        log: function () { }
     };
-  }
-
-
-  function initMap() {
-    // Styles a map in night mode.
-    var map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 51.8277394, lng: 4.6434863 },
-        zoom: 17,
-        styles: [
-            {
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#f5f5f5"
-                    }
-                ]
-            },
-            {
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#616161"
-                    }
-                ]
-            },
-            {
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#f5f5f5"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative.land_parcel",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#bdbdbd"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#eeeeee"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#757575"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#e5e5e5"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#9e9e9e"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#ffffff"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#757575"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#dadada"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#616161"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.local",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#9e9e9e"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.line",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#e5e5e5"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.station",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#eeeeee"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#c9c9c9"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#9e9e9e"
-                    }
-                ]
-            }
-        ]
-    });
-
-    var marker = new google.maps.Marker({
-      position: { lat: 51.8277394, lng: 4.6434863 },
-      map: map,
-      title: 'Reigersbek 1'
-    });
 }

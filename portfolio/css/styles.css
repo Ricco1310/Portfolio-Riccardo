@@ -112,7 +112,7 @@ body {
     background: #343a40;
 }
 
-#map {
+#map, #mapContainer {
   height: 40vh;
   width: 100%;
 }

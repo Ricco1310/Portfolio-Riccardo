@@ -19,6 +19,9 @@
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
         crossorigin="anonymous">
+
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body id="portfolio" data-spy="scroll" data-target=".navbar" data-offset="70">
@@ -120,19 +123,10 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="text-center text-primary">
-                            Spotlight
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
                 <!-- TARget -->
                 <div class="row">
                     <div class="col-md-5">
-                        <img src="img/TomTom1.png" class="img-fluid " alt="missing">
+                        <img src="img/TARgetv3_overview.jpg" class="img-fluid " alt="missing">
                     </div>
                     <div class="col-md-7">
                         <h1>TARget</h1>
@@ -155,7 +149,8 @@
                         </ul>
                     </div>
                     <div class="col-md-7 offset-md-5">
-                        <button class="btn btn-info" data-toggle="collapse" href="#TARget-motion" aria-expanded="false" aria-controls="TARget-motion">
+                        <button class="btn btn-info" data-toggle="collapse" href="#TARget-motion" aria-expanded="false" aria-controls="TARget-motion"
+                            id="target-read-more-button">
                             Read more
                         </button>
                     </div>
@@ -214,8 +209,8 @@
                                 </div>
                             </div>
                             <hr>
-                            <button class="btn btn-info mx-auto" data-toggle="collapse" href="#TARget-motion" aria-expanded="false" aria-controls="TARget-motion"
-                                style="width: 130px; display: block;">
+                            <button class="btn btn-info mx-auto d-block" data-toggle="collapse" href="#TARget-motion" aria-expanded="false" aria-controls="TARget-motion"
+                                id="target-read-more-button-second">
                                 Read more
                             </button>
                         </div>
@@ -226,7 +221,7 @@
                 <!-- Secret Motion -->
                 <div class="row">
                     <div class="col-md-5 d-block d-md-none">
-                        <img src="img/TomTom1.png" class="img-fluid " alt="missing">
+                        <img src="img/SecretMotion.png" class="img-fluid " alt="missing">
                     </div>
                     <div class="col-md-7">
                         <h1>Secret Motion</h1>
@@ -249,21 +244,69 @@
                         </ul>
                     </div>
                     <div class="col-md-5 d-none d-md-block">
-                        <img src="img/TomTom1.png" class="img-fluid " alt="missing">
+                        <img src="img/SecretMotion.png" class="img-fluid " alt="missing">
                     </div>
                     <div class="col-md-12">
-                        <button class="btn btn-info" data-toggle="collapse" href="#Secret-motion" aria-expanded="false" aria-controls="Secret-motion">
+                        <button class="btn btn-info" data-toggle="collapse" href="#Secret-motion" aria-expanded="false" aria-controls="Secret-motion"
+                            id="secret-motion-read-more-button">
                             Read more
                         </button>
                         <div class="collapse" id="Secret-motion">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, fugiat repellendus. Quae voluptas eos officia quasi, repellendus
-                            enim delectus pariatur nisi blanditiis! Ratione dicta, dolores asperiores tenetur vitae neque
-                            exercitationem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aliquid ullam
-                            voluptatem dolores in perspiciatis, quidem cum laudantium molestiae, saepe minima ipsa ad similique
-                            ut illo facilis eum mollitia qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                            totam cum repellendus voluptas accusantium, voluptate atque. Inventore possimus maiores officia
-                            impedit optio suscipit est nesciunt provident, ipsam et repellendus? Ad!
-                            <button class="btn btn-info" data-toggle="collapse" href="#Secret-motion" aria-expanded="false" aria-controls="Secret-motion">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>The brief</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquam quo maiores
+                                            quam consequatur mollitia sequi aut voluptatum, modi, ratione iste, aspernatur
+                                            cum sit perspiciatis ut esse odio est amet.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>The project</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquam quo maiores
+                                            quam consequatur mollitia sequi aut voluptatum, modi, ratione iste, aspernatur
+                                            cum sit perspiciatis ut esse odio est amet.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>The result</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquam quo maiores
+                                            quam consequatur mollitia sequi aut voluptatum, modi, ratione iste, aspernatur
+                                            cum sit perspiciatis ut esse odio est amet.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <button class="btn btn-info mx-auto d-block" data-toggle="collapse" href="#Secret-motion" aria-expanded="false" aria-controls="Secret-motion"
+                                id="secret-motion-read-more-button-second">
                                 Read more
                             </button>
                         </div>
@@ -274,7 +317,7 @@
                 <!-- Hendrik -->
                 <div class="row">
                     <div class="col-md-5">
-                        <img src="img/TomTom1.png" class="img-fluid " alt="missing">
+                        <img src="img/3dModel_2-Model_SN-page-001.jpg" class="img-fluid " alt="missing">
                     </div>
                     <div class="col-md-7">
                         <h1>Digital assistant Hendrik</h1>
@@ -297,20 +340,68 @@
                         </ul>
                     </div>
                     <div class="col-md-7 offset-md-5">
-                        <button class="btn btn-info" data-toggle="collapse" href="#Hendrik-motion" aria-expanded="false" aria-controls="Hendrik-motion">
+                        <button class="btn btn-info" data-toggle="collapse" href="#Hendrik-motion" aria-expanded="false" aria-controls="Hendrik-motion"
+                            id="hendrik-read-more-button">
                             Read more
                         </button>
                     </div>
                     <div class="col-md-12">
                         <div class="collapse" id="Hendrik-motion">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, fugiat repellendus. Quae voluptas eos officia quasi, repellendus
-                            enim delectus pariatur nisi blanditiis! Ratione dicta, dolores asperiores tenetur vitae neque
-                            exercitationem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aliquid ullam
-                            voluptatem dolores in perspiciatis, quidem cum laudantium molestiae, saepe minima ipsa ad similique
-                            ut illo facilis eum mollitia qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                            totam cum repellendus voluptas accusantium, voluptate atque. Inventore possimus maiores officia
-                            impedit optio suscipit est nesciunt provident, ipsam et repellendus? Ad!
-                            <button class="btn btn-info" data-toggle="collapse" href="#Hendrik-motion" aria-expanded="false" aria-controls="Hendrik-motion">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>The brief</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquam quo maiores
+                                            quam consequatur mollitia sequi aut voluptatum, modi, ratione iste, aspernatur
+                                            cum sit perspiciatis ut esse odio est amet.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>The project</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquam quo maiores
+                                            quam consequatur mollitia sequi aut voluptatum, modi, ratione iste, aspernatur
+                                            cum sit perspiciatis ut esse odio est amet.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>The result</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquam quo maiores
+                                            quam consequatur mollitia sequi aut voluptatum, modi, ratione iste, aspernatur
+                                            cum sit perspiciatis ut esse odio est amet.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <button class="btn btn-info" data-toggle="collapse" href="#Hendrik-motion" aria-expanded="false" aria-controls="Hendrik-motion"
+                                id="hendrik-read-more-button-second">
                                 Read more
                             </button>
                         </div>
@@ -346,18 +437,66 @@
                         <img src="img/TomTom1.png" class="img-fluid " alt="missing">
                     </div>
                     <div class="col-md-12">
-                        <button class="btn btn-info" data-toggle="collapse" href="#TomTom-motion" aria-expanded="false" aria-controls="TomTom-motion">
+                        <button class="btn btn-info" data-toggle="collapse" href="#TomTom-motion" aria-expanded="false" aria-controls="TomTom-motion"
+                            id="tomtom-curfer-read-more-button">
                             Read more
                         </button>
                         <div class="collapse" id="TomTom-motion">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, fugiat repellendus. Quae voluptas eos officia quasi, repellendus
-                            enim delectus pariatur nisi blanditiis! Ratione dicta, dolores asperiores tenetur vitae neque
-                            exercitationem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident aliquid ullam
-                            voluptatem dolores in perspiciatis, quidem cum laudantium molestiae, saepe minima ipsa ad similique
-                            ut illo facilis eum mollitia qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                            totam cum repellendus voluptas accusantium, voluptate atque. Inventore possimus maiores officia
-                            impedit optio suscipit est nesciunt provident, ipsam et repellendus? Ad!
-                            <button class="btn btn-info" data-toggle="collapse" href="#TomTom-motion" aria-expanded="false" aria-controls="TomTom-motion">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>The brief</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquam quo maiores
+                                            quam consequatur mollitia sequi aut voluptatum, modi, ratione iste, aspernatur
+                                            cum sit perspiciatis ut esse odio est amet.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>The project</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquam quo maiores
+                                            quam consequatur mollitia sequi aut voluptatum, modi, ratione iste, aspernatur
+                                            cum sit perspiciatis ut esse odio est amet.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>The result</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquam quo maiores
+                                            quam consequatur mollitia sequi aut voluptatum, modi, ratione iste, aspernatur
+                                            cum sit perspiciatis ut esse odio est amet.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/TomTom1.png" class="img-fluid rounded" alt="TomTom">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <button class="btn btn-info" data-toggle="collapse" href="#TomTom-motion" aria-expanded="false" aria-controls="TomTom-motion"
+                                id="tomtom-curfer-read-more-button-second">
                                 Read more
                             </button>
                         </div>
@@ -372,8 +511,8 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col" id="view-more-button-col">
-                        <button class="btn btn-primary mx-auto" type="button" data-toggle="collapse" data-target="#projectsCollapse" aria-expanded="false"
-                            aria-controls="projectsCollapse" id="projectsCollapseButton" style="width: 130px; display: block;">
+                        <button class="btn btn-primary mx-auto d-block" type="button" data-toggle="collapse" data-target="#projectsCollapse" aria-expanded="false"
+                            aria-controls="projectsCollapse" id="projectsCollapseButton">
                             View more
                         </button>
                     </div>
@@ -549,6 +688,12 @@
                     </div>
                     <div class="col-md-4 d-none d-md-block">
                         <img class="img-fluid about-picture" src="img/MyFace.png" alt="Picture of me">
+                        <img src="img/nieuwCV-page-001.jpg" class="img-fluid my-3" alt="Resume of Riccardo Waardenburg" data-toggle="modal" data-target="#resumeImageModal">
+                        <a class="btn btn-primary d-block mx-auto" href="img/nieuwCV.pdf" target="_blank" role="button">Download my CV</a>
+                    </div>
+                    <div class="col-md-4 d-block d-md-none mb-3">
+                        <img src="img/nieuwCV-page-001.jpg" class="img-fluid my-3" alt="Resume of Riccardo Waardenburg" data-toggle="modal" data-target="#resumeImageModal">
+                        <a class="btn btn-primary d-block mx-auto" href="img/nieuwCV.pdf" target="_blank" role="button">Download my CV</a>
                     </div>
                 </div>
             </div>
@@ -558,13 +703,13 @@
                 <div class="col-md-12 bg-light py-3 my-2 rounded-3">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 class="text-center">My qualities</h3>
+                            <h1 class="text-center" id="qualities">My qualities</h3>
                         </div>
                     </div>
                     <!-- Designer -->
                     <div class="row">
                         <div class="col-md-4">
-                            <i class="fas fa-pencil-alt fa-lg fa-fw mx-auto" style="display: block;"></i>
+                            <i class="fas fa-pencil-alt fa-lg fa-fw mx-auto d-block"></i>
                             <h3 class="text-center">Designer</h3>
                             <hr>
                             <h4 class="text-center">What I design</h4>
@@ -578,7 +723,7 @@
 
                         <!-- Researcher -->
                         <div class="col-md-4">
-                            <i class="fas fa-search fa-lg fa-fw mx-auto" style="display: block;"></i>
+                            <i class="fas fa-search fa-lg fa-fw mx-auto d-block"></i>
                             <h3 class="text-center">Researcher</h3>
                             <hr>
                             <h4 class="text-center">What I research</h4>
@@ -592,7 +737,7 @@
 
                         <!-- Developer -->
                         <div class="col-md-4">
-                            <i class="fas fa-terminal fa-lg fa-fw mx-auto" style="display: block;"></i>
+                            <i class="fas fa-terminal fa-lg fa-fw mx-auto d-block"></i>
                             <h3 class="text-center">Developer</h3>
                             <hr>
                             <h4 class="text-center">What I develop</h4>
@@ -622,6 +767,7 @@
                 <div class="row">
                     <div class="col-md-6 offset-md-3">
                         <img src="img/nieuwCV-page-001.jpg" class="img-fluid" alt="Resume of Riccardo Waardenburg" data-toggle="modal" data-target="#resumeImageModal">
+                        <a class="btn btn-primary d-block mx-auto mt-3" href="img/nieuwCV.pdf" target="_blank" role="button">Download my CV</a>
                     </div>
                 </div>
             </div>
@@ -659,17 +805,21 @@
                         </h1>
                     </div>
                 </div>
-            </div>  
+            </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div id="map"></div>
-                        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.8248809241663!2d4.641786115951706!3d51.827629395059134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c42e95888b9513%3A0x45e5688b85bc1a2b!2sReigersbek%2C+Hendrik-Ido-Ambacht!5e0!3m2!1snl!2snl!4v1532731638765"
-                            width="100%" height="300vh" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                    <div class="col-md-12 my-3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.8248809241663!2d4.641786115951706!3d51.827629395059134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c42e95888b9513%3A0x45e5688b85bc1a2b!2sReigersbek%2C+Hendrik-Ido-Ambacht!5e0!3m2!1snl!2snl!4v1532731638765"
+                            width="100%" height="300vh" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <img src="img/MyFace.png" class="img-fluid mx-auto d-block" alt="My face">
+                            </div>
+                        </div>
                         <ul class="ul-no-disc">
                             <li>
                                 <i class="fas fa-mobile-alt fa-fw"></i>
@@ -713,7 +863,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-light" type="submit">Send</button>
+                                    <button class="btn btn-primary" type="submit">Send</button>
                                 </div>
                             </div>
                         </form>
