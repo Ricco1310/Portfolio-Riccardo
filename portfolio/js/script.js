@@ -4,6 +4,8 @@ $(document).ready(function () {
 
     var currentDate = new Date();
     var currentYear = currentDate.getFullYear();
+    var currentMonth = currentDate.getMonth();
+    var currentDate = currentDate.getDate();
 
     // all navigation functions
     // navigation click actions	
@@ -131,6 +133,15 @@ $(document).ready(function () {
         }
         scrollToID('#tomtom-curfer-read-more-button', 200, 100);
     });
+
+    // automated age filler
+    if (currentMonth < 10) {
+        $('#myCurrentAge').text(currentYear-1996-1);
+    } else if (currentDate < 13 && currentMonth <= 10) {
+        $('#myCurrentAge').text(currentYear-1996-1);
+    } else {
+        $('#myCurrentAge').text(currentYear-1996);
+    }
 
     // automated year filler for copyright
     $('#copyright-year').text(currentYear);
