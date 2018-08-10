@@ -65,6 +65,10 @@ body {
   box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 }
 
+.rotate-90-l{
+  transform: rotate(90deg);
+}
+
 #my-qualities-row {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+50,7db9e8+51 */
   background: #ffffff;; /* Old browsers */
@@ -92,6 +96,11 @@ body {
 
 .about-picture {
     padding: 0 15%;
+}
+
+.my-6 {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .vr {
