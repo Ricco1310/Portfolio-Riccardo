@@ -1,74 +1,967 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="img/MyFace.png">
 
-    <title>Fixed top navbar example for Bootstrap</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Riccardo Waardenburg">
+  <meta name="author" content="Riccardo Waardenburg">
+  <link rel="icon" href="img/MyFace3.png">
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <title>Riccardo Waardenburg</title>
 
-    <!-- Custom styles for this template -->
-    <link href="css/styles.css" rel="stylesheet">
-  </head>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <body>
-<header>
+  <!-- Custom styles for this template -->
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+
+
+
+  <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body id="portfolio" data-spy="scroll" data-target=".navbar" data-offset="70">
+  <!-- Navigation header -->
+  <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Fixed navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+      <div class="container">
+        <a class="navbar-brand nav-link" data-id="landing" href="#landing" id="navbar-brand">
+          <img src="img/MyFace3.png" width="40" height="40" alt="Picture of me">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" data-id="landing" href="#landing">Riccardo Waardenburg</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-id="projects" href="#projects">Projecten</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-id="about" href="#about">Over</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-id="contact" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="globe" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-globe"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="nl.html">Nederlands</a>
+                <a class="dropdown-item" href="en.html">English</a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-</header>
+  </header>
 
-    <main role="main" class="container-fluid">
-        <div class="row row-full" id="landing">
-            <div class="col-sm-12">
-                <h1 class="text-primary">Portfolio<br> Riccardo Waardenburg</h1>
+  <!-- Main body -->
+  <main role="main" class="container-fluid">
+    <!-- Landing page-->
+    <div class="row row-full align-items-center" id="landing">
+      <div class="col-sm-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="text-primary font-weight-bold page-header text-center">
+                Riccardo Waardenburg
+              </h1>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="text-white font-italic text-center">
+                Praktische UX Designer
+              </h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="text-white header-text">
+                Ik ben een Nederlandse User Experience Designer en richt me op het ontwikkelen van projecten die een glimlach op het gezicht
+                van de gebruiker toveren. Dat is wat ik doe.
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-md-left mb-5">
+            <div class="col-md-3 mb-2">
+              <a name="projectsButton" id="projectsButton" class="btn btn-lg btn-primary nav-link" data-id="projects" href="#projects"
+                role="button">Zie Mijn Werk</a>
+            </div>
+            <div class="col-md-3">
+              <a name="aboutButton" id="aboutButton" class="btn btn-lg btn-secondary nav-link" data-id="about" href="#about" role="button">Over Mij</a>
+            </div>
+          </div>
         </div>
-        <div class="row">
-            <h1>Projects</h1>
-        </div>
-    </main>
-
-    <div class="container-fluid">
-        <div class="row bg-dark" id="footer">
-            <p class="text-center text-light">
-                Copyright Riccardo Waardenburg
-            </p>
-        </div>        
+      </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
+    <!-- Projects -->
+    <div class="row row-full align-items-top" id="projects">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center page-header text-primary">
+              Projecten
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!-- TARget -->
+        <div class="row">
+          <div class="col-md-5">
+            <img src="img/TARgetv3_overview.jpg" class="img-fluid " alt="missing">
+          </div>
+          <div class="col-md-7">
+            <h1>TARget</h1>
+            <h5 class="text-muted">Bal gooien inspannings spel voor het ontwikkelen van mik vaardigheden</h5>
+            <p>
+              TARget is een door mij gemaakt bal gooien inspanningsspel in opdracht van de onderzoeksgroep gezonde leefstijl in een stimulerende
+              omgeving met als doel kinderen te helpen bij het ontwikkelen van richt- en werpvaardigheden. Dit project is
+              gemaakt met behulp van Processing, een Java-bibliotheek.
+            </p>
+            <ul class="ul-no-disc">
+              <li>
+                <i class="fab fa-java fa-fw"></i> Gemaakt with Java
+              </li>
+              <li>
+                <i class="fas fa-pencil-alt fa-fw "></i> Nieuw ontwerp
+              </li>
+              <li>
+                <i class="fas fa-search fa-fw"></i> Onderzoek vericht
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-7 offset-md-5">
+            <button class="btn btn-info" data-toggle="collapse" href="#TARget-motion" aria-expanded="false" aria-controls="TARget-motion"
+              id="target-read-more-button">
+              Lees meer
+            </button>
+          </div>
+          <div class="col-md-12">
+            <div class="collapse" id="TARget-motion">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The brief</h1>
+                    <p>
+                      TARget werd gemaakt tijdens mijn eerste stage bij de onderzoeksgroep gezonde leefstijl in een stimulerende omgeving over
+                      een 20 weken durende periode inclusief gebruikerstesten en onderzoek.
+                      <br>
+                      <br> Het doel van het project was om interactieve technologieën toe te passen om de lessen lichamelijke
+                      opvoeding efficiënter, motiverender en gerichter te maken.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="img/target/target_code1.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-6">
+                    <img src="img/target/target_code2.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The project</h1>
+                    <p>
+                      Vóór de ontwikkeling van TARget zelf werd onderzoek gedaan naar het huidige Nederlandse leerplan voor lichamelijke opvoeding
+                      en hoe dit werd toegepast in lessen lichamelijke opvoeding. Hieruit is besloten om zich te concentreren
+                      op het richten en gooien onderdeel van het curriculum. Gebruikers moeten vanaf een afstand naar een
+                      doel met variabele grootte gooien op basis van de leeftijd van de gebruiker en hun vaardigheidsniveau.
+                      <br>
+                      <br> Om de door de gebruiker gemaakte worpen digitaal te registreren, werd de Kinect gebruikt, dankzij
+                      de handige infraroodsensor en eenvoudige integratie met verschillende programmeertalen en IDE's.
+                      <br>
+                      <br> Op basis van deze criteria is TARget gemaakt met behulp van Processing, een uitbreiding voor Java,
+                      waarbij de gebruiker een doel in verschillende gamemodes kan gebruiken om tegemoet te komen aan de
+                      ontwikkeling van verschillende vaardigheden. Het programma is verdeeld in meerdere klassen om de interactie
+                      tussen de hoofdlogica-lus, de afzonderlijke gamemodes en de Kinect-sensor eenvoudiger te maken.
+                    </p>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4 mb-3">
+                    <img src="img/target/target_home.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/target/target_gamemodes.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/target/target_settings.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/target/target_target1.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/target/target_target2.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/target/target_levels.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The result</h1>
+                    <p>
+                      Aan het einde van mijn stage waren 4 gamemodes met succes geïmplementeerd in TARget. Namelijk een standaardmodus
+                      waarbij de speler zonder enige feedback tegen een statisch doel kan gooien, een bewegende modus waarbij
+                      het doel van positie op het scherm verandert, een modus voor het veranderen van de grootte waarbij
+                      het doel krimpt of vergroot op basis van of het geraakt is of niet en een complementaire feedback-gamemodus
+                      die de gebruiker het exacte punt toont waarop de bal de muur raakt met een paarse stip.
+                      <br>
+                      <br> Op het moment van schrijven was een 5e gamemode inbegrepen door middel van een voorwaardelijke, krimpende
+                      of vergrotende gamemode, waarbij spelers meerdere keren een doelwit moesten raken om het te laten krimpen
+                      en meerdere keren missen om het te laten groeien.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="img/target/TARgetv3_2.jpg" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-6">
+                    <img src="img/target/TARgetv3_3.jpg" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <button class="btn btn-info mx-auto d-block" data-toggle="collapse" href="#TARget-motion" aria-expanded="false" aria-controls="TARget-motion"
+                id="target-read-more-button-second">
+                Lees meer
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr class="project-divider">
+
+        <!-- Secret Motion -->
+        <div class="row">
+          <div class="col-md-5 d-block d-md-none">
+            <img src="img/SecretMotion.png" class="img-fluid " alt="missing">
+          </div>
+          <div class="col-md-7">
+            <h1>Secret Motion</h1>
+            <h5 class="text-muted">Unity VR Leap Motion project</h5>
+            <p>
+              Secret Motion is a VR project developed for the Oculus Rift where the player can interact with the virtual environment using
+              their own hands using a Leap Motion controller mounted on the front of the Oculus Rift. This project was realised
+              using Unity.
+            </p>
+            <ul class="ul-no-disc">
+              <li>
+                <img src="img/unity.png" alt="Unity Logo" class="fa-fw"> Made with Unity
+              </li>
+              <li>
+                <img src="img/oculus.png" alt="Oculus Logo" class="fa-fw"> Made for VR
+              </li>
+              <li>
+                <i class="fas fa-hands fa-fw"></i> Motion Control
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 d-none d-md-block">
+            <img src="img/SecretMotion.png" class="img-fluid " alt="missing">
+          </div>
+          <div class="col-md-12">
+            <button class="btn btn-info" data-toggle="collapse" href="#Secret-motion" aria-expanded="false" aria-controls="Secret-motion"
+              id="secret-motion-read-more-button">
+              Read more
+            </button>
+            <div class="collapse" id="Secret-motion">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The brief</h1>
+                    <p>
+                      Secret Motion was created as part of a 2 week program were I had to create something related to use AR, VR or both in a group
+                      situation. We decided we wanted to have users be able to use their own hands whilst in a VR environment.
+                      For this we used Unity due to previous knowledge and experience.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 offset-md-3">
+                    <img src="img/secretmotion/Poster.jpg" class="img-fluid rounded rotate-90-l my-6" alt="TomTom">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The project</h1>
+                    <p>
+                      Secret Motion initially started off as a very ambitious project were we wanted to have the player in a fully modelled interactive
+                      environment play as a mage and be able to access certain spells by making gestures with their hands.
+                      However it was quite quickly apparent that this was not possible in our allocated time.
+                      <br>
+                      <br> We pivoted over to creating a simpler interactive environment where the player can interact with various
+                      objects and have certain actions happen based on hand and finger position. In order to accomplish this
+                      we split up the various elements of the project into its constituent pieces and began animating and
+                      programming these. These individual pieces were each tested using one of the Leap Motion sensors we
+                      had, after which we also tested them with the Oculus Rift which was modified to have a Leap Motion
+                      sensor mounted in front of it.
+                      <br>
+                      <br> After having created these individual pieces I took it onto me to gather and combine all of these
+                      and make them play nice with each other. For this I created a new environment and imported the various
+                      scripts and objects one by one. After which I calibrated the distances and the objects to be of an
+                      useable size for the user.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="img/secretmotion/Doel.jpg" class="img-fluid rounded rotate-90-l my-6" alt="TomTom">
+                  </div>
+                  <div class="col-md-6">
+                    <img src="img/secretmotion/Pyramid.jpg" class="img-fluid rounded rotate-90-l my-6" alt="TomTom">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The result</h1>
+                    <p>
+                      To conclude these 2 weeks an exposition was organised where visitors could visit and interact with the project. The user
+                      was positioned at the centre of the floor as marked by a black piece of tape on the ground and had
+                      the Oculus Rift and Leap motion placed over the head.
+                      <br>
+                      <br> The user could interact with various buttons in the environment by physically reaching out for them
+                      and touching them. These buttons would create various objects for the user to interact with, the user
+                      could move them by pushing or could lift them by grasping. Then the user could throw the objects at
+                      a target placed in the distance. Pressing the buttons again would destroy the old object and create
+                      a new one. Furthermore the user could enable laser hands by pressing a button and pointing the palm
+                      of the hand at a target, after which the laser would be fired from the palm. Lastly the user could
+                      light us a fire on the thumb by raising it.
+                    </p>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-12">
+                    <iframe width="100%" height="300vh" src="https://www.youtube.com/embed/-KdHM2F2Kh8" frameborder="0" allow="autoplay; encrypted-media"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <button class="btn btn-info mx-auto d-block" data-toggle="collapse" href="#Secret-motion" aria-expanded="false" aria-controls="Secret-motion"
+                id="secret-motion-read-more-button-second">
+                Read more
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr class="project-divider">
+
+        <!-- Hendrik -->
+        <div class="row">
+          <div class="col-md-5">
+            <img src="img/3dModel_2-Model_SN-page-001.jpg" class="img-fluid " alt="missing">
+          </div>
+          <div class="col-md-7">
+            <h1>Digital assistant Hendrik</h1>
+            <h5 class="text-muted">Digital guided assistant and companion</h5>
+            <p>
+              Digital assistant Hendrik is a digital companion and guide users can access on their mobile phone to assist them during their
+              visit at the Gemeentemuseum Den Haag. Hendrik gives handy tips and information whilst being minimally obtrusive
+              using AR technology.
+            </p>
+            <ul class="ul-no-disc">
+              <li>
+                <i class="fas fa-mobile-alt fa-fw"></i> Mobile first
+              </li>
+              <li>
+                <i class="fas fa-pencil-alt fa-fw "></i> Fresh design
+              </li>
+              <li>
+                <i class="fas fa-search fa-fw"></i> Performed research
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-7 offset-md-5">
+            <button class="btn btn-info" data-toggle="collapse" href="#Hendrik-motion" aria-expanded="false" aria-controls="Hendrik-motion"
+              id="hendrik-read-more-button">
+              Read more
+            </button>
+          </div>
+          <div class="col-md-12">
+            <div class="collapse" id="Hendrik-motion">
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The brief</h1>
+                    <p>
+                      The Gemeentemuseum Den Haag had a problem where they found that people would get lost in the museum and asked us how we could
+                      solve this. For this we had a 7 week research cycle and a 7 design and develop cycle. After preliminary
+                      research into the building we decided we would focus on finding out what the people wanted and found
+                      important about their visit.
+                    </p>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <img src="img/hendrik/MichellePersona.png" class="img-fluid rounded mb-3" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/hendrik/SannePersona.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/hendrik/PietPersona.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The project</h1>
+                    <p>
+                      The project started off with an initial visit to the museum for a look into how we experienced the current museum as it is.
+                      Based on this we gathered a list of what we deemed as inadequacies, such as bad signage and not knowing
+                      if you visited the entire museum.
+                      <br>
+                      <br> Based on this we started interviewing visitors and observing behaviour within the museum. This verified
+                      our earlier findings, but also added a requirement for more information about the art. We decided that
+                      we would focus on the holistic experience of the museum visit, and gathered more data on that such
+                      as visitor’s interaction with various touchpoints within the museum and common patterns exhibited by
+                      visitors. Another point we found out was that most people did not know the interesting story of the
+                      museum, which was created by Hendrik Berlage in order with the intend of making people feel lost in
+                      time whilst in the museum.
+                      <br>
+                      <br> From this research we started development on a guide for the visitor, but found that it was too intrusive.
+                      As such we performed research on digital assistants and how to make these non-obtrusive. We focused
+                      on improving the story of Berlage and the museum, increasing the amount of information available to
+                      the museum and making the visitor feel fulfilled at the end of the visit.
+                    </p>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6 offset-md-3">
+                    <img src="img/hendrik/0-Floor.jpg" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The result</h1>
+                    <p>
+                      The final result, named Hendrik, after the creator of the building is a digital assistant visitors can download on their
+                      phone using the free Wi-Fi at the museum. Hendrik is originally introduced to the visitors via the
+                      tickets they order. These personalised tickets contain a personal message from the museum which guides
+                      them to the digital assistant.
+                      <br>
+                      <br> Once downloaded and visiting the museum the digital assistant will guide the visitor around using
+                      simple and clean digital maps. Then after the person is at a point of interest the phone will draw
+                      the attention of the user asked to be pointed to the point of interest. Visitors can subsequently read
+                      information of this point of interest.
+                      <br>
+                      <br> Lastly the digital assistant will guide the visitor to the Berlage room where more information about
+                      Berlage and his museum is presented using an interactive 3d model of the museum.
+                      <br>
+                      <br> As the visitors are done with the visit they can keep their personalised tickets as memorabilia and
+                      try collecting other pieces.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <img src="img/hendrik/P final 01.png" class="img-fluid rounded mb-3" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/hendrik/P final 05.png" class="img-fluid rounded mb-3" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/hendrik/P final 06.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/hendrik/P final 02,2.png" class="img-fluid rounded mb-3" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/hendrik/P final 09.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                </div>
+                <hr>
+              </div>
+
+              <button class="btn btn-info d-block mx-auto" data-toggle="collapse" href="#Hendrik-motion" aria-expanded="false" aria-controls="Hendrik-motion"
+                id="hendrik-read-more-button-second">
+                Read more
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr class="project-divider">
+
+        <!-- TomTom Curfer -->
+        <div class="row">
+          <div class="col-md-5 d-block d-md-none">
+            <img src="img/TomTom1.png" class="img-fluid " alt="missing">
+          </div>
+          <div class="col-md-7">
+            <h1>TomTom Curfer</h1>
+            <h5 class="text-muted">Redesigned driving statistics app</h5>
+            <p>
+              TomTom Curfer is a project in which I redesigned the currently existing TomTom Curfer, a car driving statistics app, in order
+              to add to the experience of its user. For this a communal element was added into the Curfer to make people
+              compete and compare their scores. </p>
+            <ul class="ul-no-disc">
+              <li>
+                <i class="fas fa-mobile-alt fa-fw"></i> Mobile first
+              </li>
+              <li>
+                <i class="fas fa-redo fa-fw"></i> Redesign
+              </li>
+              <li>
+                <i class="fas fa-search fa-fw"></i> Performed research
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 d-none d-md-block">
+            <img src="img/TomTom1.png" class="img-fluid " alt="missing">
+          </div>
+          <div class="col-md-12">
+            <button class="btn btn-info" data-toggle="collapse" href="#TomTom-motion" aria-expanded="false" aria-controls="TomTom-motion"
+              id="tomtom-curfer-read-more-button">
+              Read more
+            </button>
+            <div class="collapse" id="TomTom-motion">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The brief</h1>
+                    <p>
+                      TomTom Curfer came out of a request by TomTom to create a redesign for their newest product, the TomTom Curfer, since it
+                      didn’t gain much traction in its current state. We were to identify the core issues and create redesigns
+                      based on these issues. These redesigns did not have to be fully functioning, but had to show the solution
+                      as an interactive prototype. 10 weeks were established for this project including research and design.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 offset-md-3">
+                    <img src="img/tomtom/persona.jpg" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The project</h1>
+                    <p>
+                      The TomTom Curfer is an application on the user’s mobile phone which tracks the data outputted by the car and its internal
+                      sensors. Based on these data statistics, the driver is awarded a current score where lower scores means
+                      worse driving.
+                      <br>
+                      <br> The project itself started off with me getting a TomTom Curfer installed on my own car and take a
+                      test drive with it myself, to see how and if it worked. After this I recruited 2 drivers and had them
+                      drive for 30 minutes a set track around the area. This was followed up with an interview with the drivers
+                      to understand if they would use the TomTom Curfer in the future and if no, why not.
+                      <br>
+                      <br> From this I established that the drivers felt no need to use the TomTom Curfer, since it only existed
+                      in its own application. The drivers wanted reasons to use the application such as competition and rewards.
+                      <br>
+                      <br> I met with a car mechanic and asked what he knew about the TomTom Curfer and its related technologies.
+                      Sadly enough not much new insights were gained from this conversation. He did however, verify what
+                      the TomTom Curfer measured as its limits and came to similar conclusions as the drivers originally
+                      did.
+                      <br>
+                      <br> Based on this I started creating a redesign using Photoshop and Axure RP. Since I had access to the
+                      base screens I could quickly conjure up new screens and decided to add a communal aspect to the TomTom
+                      Curfer using a competitive system as its base.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <img src="img/tomtom/scoreScreen.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/tomtom/groupOverview.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/tomtom/GroupView.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/tomtom/groupIndividual.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="img/tomtom/trackExport.png" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1>The result</h1>
+                    <p>
+                      The final redesign of the TomTom Curfer consists of a home screen where your driving score is determined on you average driving
+                      score divided by your total distance travelled. A group section where people can join and leave groups
+                      and a score overview page.
+                      <br>
+                      <br> The user can join a group via a code generated by the groups administrator(s), after joining the group
+                      members can see each other’s driving scores. Based on these scores a ranking system is implemented
+                      where the best driver is placed at the top of the leader board. Other drivers within the group can
+                      subsequently try to improve their driving in order to overtake the leader. A reward could be given
+                      to the groups top scorer each month. For example a company could reward the top driver with fuel paybacks.
+                      <br>
+                      <br> The way the score is handled is using the same metrics as previously used. But instead of it constantly
+                      showing a score, it instead awards points for good behaviours and actions whilst driving, and subtracts
+                      points when bad behaviours or actions are done. This results in a score per distance. Which the user
+                      can see and improve upon. Secondly the system also provides feedback as to why it added or subtracted
+                      points such as taking gentle corners or harsh braking.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 offset-md-3">
+                    <img src="img/tomtom/handout.jpg" class="img-fluid rounded" alt="TomTom">
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <button class="btn btn-info d-block mx-auto" data-toggle="collapse" href="#TomTom-motion" aria-expanded="false" aria-controls="TomTom-motion"
+                id="tomtom-curfer-read-more-button-second">
+                Read more
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr class="project-divider">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="img/wionplus1.png" class="img-fluid " alt="missing">
+          </div>
+          <div class="col-md-7">
+            <h1>WionPlus</h1>
+            <h5 class="text-muted">Website + ICT support</h5>
+            <p>
+              WionPlus BV requested a website on which they could show their activities and contact information. They also needed an e-mail
+              and further ICT support.
+            </p>
+            <ul class="ul-no-disc">
+              <li>
+                <i class="fas fa-code fa-fw"></i> Website
+              </li>
+              <li>
+                <i class="fas fa-pencil-alt fa-fw "></i> Fresh design
+              </li>
+              <li>
+                <i class="fas fa-desktop fa-fw"></i> ICT support
+              </li>
+            </ul>
+            <a id="wionplus-visit-website" class="btn btn-info" href="https://wionplus.nl" target="_blank" role="button">Visit website</a>
+          </div>
+        </div>
+        <hr class="project-divider">
+        <div class="row">
+          <div class="col-md-5 d-block d-md-none">
+            <img src="img/ricofs1.png" class="img-fluid " alt="missing">
+          </div>
+          <div class="col-md-7">
+            <h1>RicoFS</h1>
+            <h5 class="text-muted">Website + ICT support</h5>
+            <p>
+              RicoFS requested a website on which they could show their activities and contact information. They also needed an e-mail
+              and further ICT support.
+            </p>
+            <ul class="ul-no-disc">
+              <li>
+                <i class="fas fa-code fa-fw"></i> Website
+              </li>
+              <li>
+                <i class="fas fa-pencil-alt fa-fw "></i> Fresh design
+              </li>
+              <li>
+                <i class="fas fa-desktop fa-fw"></i> ICT support
+              </li>
+            </ul>
+            <a id="ricofs-visit-website" class="btn btn-info" href="https://ricofs.nl" target="_blank" role="button">Visit website</a>
+          </div>
+          <div class="col-md-5 d-none d-md-block">
+            <img src="img/ricofs1.png" class="img-fluid " alt="missing">
+          </div>
+        </div>
+        <hr class="project-divider">
+      </div>
+    </div>
+
+    <div class="row row-full bg-secondary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center text-primary page-header">
+              About
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 d-block d-md-none">
+            <img class="img-fluid about-picture" src="img/MyFace3.png" alt="Picture of me">
+          </div>
+          <div class="col-md-8">
+            <p class="text-white">
+              Hi! I’m Riccardo Waardenburg.
+              <br>
+              <br>To me nothing is more satisfying than designing and developing amazing products with an equally amazing team.
+              All to put a smile on the face of the user.
+              <br>
+              <br>I am currently in the final year of the User Experience Design program at The Hague University of Applied Sciences.
+              <br>
+              <br> Born
+              <span id="myCurrentAge"></span> years ago in a village called Zwijndrecht on the outskirts of the Dutch Randstad.
+              <br> Early in my youth, my parents and I moved to the neighbouring Hendrik-Ido-Ambacht, where I still live to this
+              day.
+              <br> During my high school period I obtained a CAE certificate and an International Baccalaureate, which allow
+              me to operate on a higher level of English.
+              <br> A Technasium certificate, which gave me an early taste at designing and developing.
+              <br> I finished high school with VWO NG&NT.
+              <br>
+              <br> When I’m not busy with work I can be found playing video-games or watching series and movies. But mostly I
+              can be found reading up on what interest me. Be it work-related, game-related or a documentary on space.
+              <br>
+            </p>
+          </div>
+          <div class="col-md-4 d-none d-md-block">
+            <img class="img-fluid about-picture" src="img/MyFace3.png" alt="Picture of me">
+            <div class="row">
+              <div class="col-6 offset-md-3">
+                <img src="img/CV_Riccardo_Waardenburg.jpg" class="img-fluid my-3" alt="Resume of Riccardo Waardenburg" data-toggle="modal"
+                  data-target="#resumeImageModal">
+                <a class="btn btn-primary d-block mx-auto" href="img/CV_Riccardo_Waardenburg.pdf" target="_blank" role="button">Download my CV</a>
+                <a class="btn btn-info d-block mx-auto mt-3" href="https://www.linkedin.com/in/riccardo-waardenburg/" target="_blank" role="button">View my LinkedIn</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 d-block d-md-none mb-3">
+            <img src="img/CV_Riccardo_Waardenburg.jpg" class="img-fluid my-3" alt="Resume of Riccardo Waardenburg" data-toggle="modal"
+              data-target="#resumeImageModal">
+            <a class="btn btn-primary d-block mx-auto" href="img/CV_Riccardo_Waardenburg.pdf" target="_blank" role="button">Download my CV</a>
+            <a class="btn btn-info d-block mx-auto mt-3" href="https://www.linkedin.com/in/riccardo-waardenburg/" target="_blank" role="button">View my LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <!-- My qualities -->
+      <div class="container">
+        <div class="col-md-12 bg-light py-3 my-3 rounded-3">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h1 class="text-center" id="qualities">My qualities</h3>
+            </div>
+          </div>
+          <!-- Designer -->
+          <div class="row">
+            <div class="col-md-4">
+              <i class="fas fa-pencil-alt fa-lg fa-fw mx-auto d-block"></i>
+              <h3 class="text-center">Designer</h3>
+              <hr>
+              <h4 class="text-center">What I design</h4>
+              <p class="text-center">Style Tiles - UX - Prototypes</p>
+              <h4 class="text-center">My design tools</h4>
+              <ul class="ul-no-disc text-center">
+                <li>InVision</li>
+                <li>Marvel</li>
+                <li>Axure RP</li>
+                <li>Pen & Paper</li>
+                <li>Pen & Digital Paper</li>
+                <li>Photoshop</li>
+                <li>AutoCad</li>
+                <li>QGIS</li>
+              </ul>
+            </div>
+
+            <!-- Researcher -->
+            <div class="col-md-4">
+              <i class="fas fa-search fa-lg fa-fw mx-auto d-block"></i>
+              <h3 class="text-center">Researcher</h3>
+              <hr>
+              <h4 class="text-center">What I research</h4>
+              <p class="text-center">Behaviour - Interaction - Context</p>
+              <h4 class="text-center">My research tools</h4>
+              <ul class="ul-no-disc text-center">
+                <li>A/B Testing</li>
+                <li>Contextual Inquiry</li>
+                <li>Mind Mapping</li>
+                <li>Stakeholder Walkthrough</li>
+                <li>Literature Reviews</li>
+                <li>Task Analysis</li>
+                <li>Wizard of Oz</li>
+                <li>Think-aloud Protocol</li>
+                <li>Personas</li>
+                <li>Fly-on-the-wall Observation</li>
+                <li>Card Sorting</li>
+                <li>Diary Studies</li>
+                <li>Case Studies</li>
+              </ul>
+            </div>
+
+            <!-- Developer -->
+            <div class="col-md-4">
+              <i class="fas fa-terminal fa-lg fa-fw mx-auto d-block"></i>
+              <h3 class="text-center">Developer</h3>
+              <hr>
+              <h4 class="text-center">What I develop</h4>
+              <p class="text-center">Prototypes - MVPs - Demos</p>
+              <h4 class="text-center">My developing tools</h4>
+              <ul class="ul-no-disc text-center">
+                <li>Java</li>
+                <li>Processing</li>
+                <li>Unity</li>
+                <li>Lua</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Javascript</li>
+                <li>Bootstrap</li>
+                <li>Jquery</li>
+                <li>Github</li>
+                <li>WordPress</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="resumeImageModal" tabindex="-1" role="dialog" aria-labelledby="resumeImageModalInner" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="resumeImageModalInner">Resume Riccardo Waardenburg</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10 offset-md-1">
+                  <img src="img/CV_Riccardo_Waardenburg.jpg" class="img-fluid" alt="Resume of Riccardo Waardenburg" data-toggle="modal" data-target="#resumeImageModal">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-full" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center text-primary page-header">
+              Contact
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 my-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.8248809241663!2d4.641786115951706!3d51.827629395059134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c42e95888b9513%3A0x45e5688b85bc1a2b!2sReigersbek%2C+Hendrik-Ido-Ambacht!5e0!3m2!1snl!2snl!4v1532731638765"
+              width="100%" height="300vh" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <img src="img/MyFace3.png" class="img-fluid mx-auto d-block" alt="My face">
+              </div>
+            </div>
+            <ul class="ul-no-disc">
+              <li>
+                <i class="fas fa-mobile-alt fa-fw"></i>
+                <a href="tel:+31619672972">+316-1967-2972</a>
+              </li>
+              <li>
+                <i class="far fa-envelope fa-fw"></i>
+                <a href="mailto:rico-ux@outlook.com">rico-ux@outlook.com</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt fa-fw"></i>Reigersbek 1, Hendrik-Ido-Ambacht</li>
+            </ul>
+
+          </div>
+          <div class="col-md-8">
+            <form action="https://formspree.io/rico-ux@outlook.com" method="POST">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control mt-2" placeholder="Name" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" name="company" class="form-control mt-2" placeholder="Company">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="email" name="_replyto" class="form-control mt-2" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="number" name="phone" class="form-control mt-2" placeholder="Phone">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <textarea class="form-control" name="message" id="formMessageTextArea" placeholder="Your message" rows="3" required></textarea>
+                  </div>
+                </div>
+                <input type="hidden" name="_next" value="#contact" />
+                <input type="hidden" name="_subject" value="Mail from Rico-UX Portfolio" />
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid">
+    <div class="row bg-dark" id="footer">
+      <div class="col-md-12">
+        <p class="text-center text-white">
+          Copyright
+          <i class="far fa-copyright fa-fw"></i>
+          <span id="copyright-year"></span> Riccardo Waardenburg
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> crossorigin = "anonymous" ></script>
+  <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="js/vendor/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
 </html>
