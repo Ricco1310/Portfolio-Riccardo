@@ -2,10 +2,10 @@ var projectsCollapseButtonExpanded = false;
 
 $(document).ready(function () {
 
-    var currentDate = new Date();
-    var currentYear = currentDate.getFullYear();
-    var currentMonth = currentDate.getMonth();
-    var currentDate = currentDate.getDate();
+    var currentDateData = new Date();
+    var currentYear = currentDateData.getFullYear();
+    var currentMonth = currentDateData.getMonth();
+    var currentDate = currentDateData.getDate();
 
     // all navigation functions
     // navigation click actions	
@@ -228,7 +228,7 @@ $(document).ready(function () {
     // automated age filler
     if (currentMonth < 10) {
         $('#myCurrentAge').text(currentYear-1996-1);
-    } else if (currentDate < 13 && currentMonth <= 10) {
+    } else if (currentDate < 13 && currentMonth <= 9) {
         $('#myCurrentAge').text(currentYear-1996-1);
     } else {
         $('#myCurrentAge').text(currentYear-1996);
